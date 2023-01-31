@@ -1,10 +1,18 @@
-import Header from "./components/Header"
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
 
   return (
-    <Header />
-  )
-}
+    <>
+      <Header />
+      <Home />
+      <Projects />
+      <Footer />
+    </>
+  );
+};
 
-export default App
+export default App;
