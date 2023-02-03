@@ -35,13 +35,13 @@ const Layout = () => {
               Proyectos
             </Link>
             <Link 
-              to="#" 
+              to="/habilidades" 
               className="relative hover:text-gray-700 transition-colors duration-[400ms] after:absolute after:content-[''] after:w-0 after:left-0 after:h-0.5 after:-bottom-1 after:bg-gray-700 after:duration-[400ms] hover:after:w-full"
             >
               Habilidades
             </Link>
             <Link 
-              to="#" 
+              to="/contacto" 
               className="relative hover:text-gray-700 transition-colors duration-[400ms] after:absolute after:content-[''] after:w-0 after:left-0 after:h-0.5 after:-bottom-1 after:bg-gray-700 after:duration-[400ms] hover:after:w-full"
             >
               Contacto
