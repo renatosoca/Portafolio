@@ -1,7 +1,6 @@
-import Home from "../components/Home";
+import { Home } from "../components";
 
-
-const Index = () => {
+const IndexPage = () => {
   return (
     <>
       <Home />
@@ -12,4 +11,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export { IndexPage }

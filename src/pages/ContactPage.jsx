@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Skills = () => {
+const ContactPage = () => {
   return (
     <>
       <section className="container mx-auto px-10 pb-5">
-        <h2>Habilidades</h2>
+        <h2>ContactPageo</h2>
       </section>
     </>
   )
 }
 
-export default Skills
+export { ContactPage }

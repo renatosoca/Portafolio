@@ -1,13 +1,13 @@
-import React from 'react'
 
-const Contact = () => {
+
+const AboutMePage = () => {
   return (
     <>
       <section className="container mx-auto px-10 pb-5">
-        <h2>Contacto</h2>
+        <h2>Sobre Mi</h2>
       </section>
     </>
   )
 }
 
-export default Contact
+export { AboutMePage }

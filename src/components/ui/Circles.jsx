@@ -10,4 +10,4 @@ const Circles = () => {
   )
 }
 
-export default Circles;
+export { Circles }

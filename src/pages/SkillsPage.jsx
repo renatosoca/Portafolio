@@ -1,13 +1,13 @@
 import React from 'react'
 
-const AboutMe = () => {
+const SkillsPage = () => {
   return (
     <>
       <section className="container mx-auto px-10 pb-5">
-        <h2>Sobre Mi</h2>
+        <h2>Habilidades</h2>
       </section>
     </>
   )
 }
 
-export default AboutMe
+export { SkillsPage }

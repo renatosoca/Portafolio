@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <>
       <section className="container mx-auto px-10 pb-5">
@@ -10,4 +10,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export { ProjectsPage }
