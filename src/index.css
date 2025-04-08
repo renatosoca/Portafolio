@@ -1,66 +1,8 @@
 @import 'tailwindcss';
+
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
-
-/* customized theme */
-@theme {
-  --font-sans: 'Public Sans Variable', 'Nunito', 'Arial', sans-serif;
-  --font-public-sans: 'Public Sans Variable';
-
-  --color-primary: #009688;
-  --color-secondary: #1888ee;
-  --color-hover-primary: #00897b;
-  --color-hover-secondary: #0f77d4;
-  --color-disabled-primary: #8c8c8c;
-  --color-disabled-secondary: #b7c4cf;
-  --color-default-bg: #fafafb;
-  --color-primary-bg: #e3fdff;
-  --color-secondary-bg: #f5f5f5;
-  --color-tertiary-bg: #f0f0f0;
-
-  --radius-primary: 0.2rem;
-
-  /* --container-2xl: 1400px; */
-
-  --animate-slide-fade: slide-fade 1s linear infinite;
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-
-  @keyframes slide-fade {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
-}
-
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
-}
 
 :root {
   --radius: 0.625rem;
@@ -169,6 +111,56 @@ body {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* customized theme */
+@theme {
+  --font-sans: 'Public Sans Variable', 'Nunito', 'Arial', sans-serif;
+  --font-public-sans: 'Public Sans Variable';
+
+  --color-primary: #009688;
+  --color-secondary: #1888ee;
+  --color-hover-primary: #00897b;
+  --color-hover-secondary: #0f77d4;
+  --color-disabled-primary: #8c8c8c;
+  --color-disabled-secondary: #b7c4cf;
+  --color-default-bg: #fafafb;
+  --color-primary-bg: #e3fdff;
+  --color-secondary-bg: #f5f5f5;
+  --color-tertiary-bg: #f0f0f0;
+
+  --radius-primary: 0.2rem;
+
+  /* --container-2xl: 1400px; */
+
+  --animate-slide-fade: slide-fade 1s linear infinite;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes slide-fade {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -191,11 +183,6 @@ body {
   background-color: #444;
 }
 
-.container {
-  max-width: 140rem;
-  width: 90%;
-  margin: 0 auto;
-}
 .circle1 {
   animation: circle1 11s cubic-bezier(0.1, 0, 0.9, 1) infinite;
 }
