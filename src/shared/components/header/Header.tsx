@@ -12,7 +12,7 @@ export const Header = () => {
 
     if (menuBackDropRef.current) {
       menuBackDropRef.current.style.setProperty('--left', `${left / 16}rem`)
-      menuBackDropRef.current.style.setProperty('--top', `${top / 18}rem`)
+      menuBackDropRef.current.style.setProperty('--top', `${top / 16}rem`)
       menuBackDropRef.current.style.setProperty('--width', `${width / 16}rem`)
       menuBackDropRef.current.style.setProperty('--height', `${height / 16}rem`)
     }
@@ -42,15 +42,15 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="fixed z-10 w-full bg-white">
-      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 py-4">
+    <header className="z-10 w-full bg-white">
+      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 py-2">
         <div className="flex items-center gap-8">
-          <Link to={'/'} className="flex items-center justify-center gap-2 py-2 text-2xl font-bold text-black">
+          <Link to={'/'} className="flex items-center justify-center gap-2 py-0 text-2xl font-bold text-black">
             <BiTerminal className="text-4xl" />
           </Link>
 
-          <nav className="flex gap-3 font-medium text-gray-500">
-            <ul className="flex list-none gap-4">
+          <nav className="block font-medium text-gray-500">
+            <ul className="flex h-full gap-4">
               <NavItem
                 pathname="/project"
                 pathLabel="Proyectos"
@@ -69,13 +69,11 @@ export const Header = () => {
 
             <div
               ref={menuBackDropRef}
-              className="invisible absolute top-0 left-0 z-[-1] bg-black/10 p-4 opacity-0 backdrop-blur-2xl transition-transform duration-300 ease-in-out"
+              className="invisible absolute top-0 left-0 z-[-1] rounded bg-black/10 p-4 py-2 opacity-0 backdrop-blur-2xl transition-[transform,width,height,opacity,visibility] duration-[300ms,400ms,300ms,400ms,400ms] ease-initial"
               style={{
                 transform: 'translate(var(--left), var(--top))',
                 width: 'var(--width)',
-                height: 'var(--height)',
-                transition:
-                  'transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out'
+                height: 'var(--height)'
               }}
             />
           </nav>

@@ -1,4 +1,4 @@
-import { FC, MouseEvent, RefObject } from 'react'
+import { FC, MouseEvent, RefObject, memo } from 'react'
 import { NavLink } from 'react-router-dom'
 
 interface NavItemProps {
@@ -9,7 +9,7 @@ interface NavItemProps {
   handleMouseLeave?: () => void
 }
 
-export const NavItem: FC<NavItemProps> = ({
+const NavItemComponent: FC<NavItemProps> = ({
   pathname,
   pathLabel,
   defaultMenuItemRef,
@@ -17,10 +17,12 @@ export const NavItem: FC<NavItemProps> = ({
   handleMouseLeave
 }) => {
   return (
-    <li ref={defaultMenuItemRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <NavLink to={pathname} className={({ isActive }) => `w-full px-4 py-2 ${isActive ? 'bg-black/10' : ''}`}>
+    <li className="h-full" ref={defaultMenuItemRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <NavLink to={pathname} className={({ isActive }) => `block w-full rounded px-4 py-2 ${isActive ? '' : ''}`}>
         {pathLabel}
       </NavLink>
     </li>
   )
 }
+
+export const NavItem = memo(NavItemComponent)

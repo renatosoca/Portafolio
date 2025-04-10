@@ -5,6 +5,7 @@ export const Home = () => {
     <>
       <section className="relative min-h-screen overflow-hidden">
         <Circles />
+        <h1>Hola</h1>
       </section>
     </>
   )
