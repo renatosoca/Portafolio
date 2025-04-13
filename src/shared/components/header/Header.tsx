@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { BiTerminal } from 'react-icons/bi'
 import { NavItem } from './NavItem'
 import { InputComponent } from '@/shared/components'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 export const Header = () => {
   const menuBackDropRef = useRef<HTMLDivElement | null>(null)
@@ -44,13 +45,13 @@ export const Header = () => {
 
   return (
     <header className="fixed z-100 w-full">
-      <div className="mx-auto flex w-full max-w-[80rem] items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-8">
-          <Link to={'/'} className="flex items-center justify-center gap-2 py-0 text-2xl font-bold text-black">
+      <div className="mx-auto flex w-full max-w-[80rem] items-center justify-between gap-3 px-4 py-3">
+        <div className="flex items-center gap-8 ">
+          <Link to={'/'} className=" font-bold text-black">
             <BiTerminal className="text-4xl" />
           </Link>
 
-          <nav className="block font-medium text-black">
+          <nav className="hidden font-medium text-black md:block">
             <ul className="flex h-full gap-4">
               <NavItem
                 pathname="/project"
@@ -80,10 +81,14 @@ export const Header = () => {
           </nav>
         </div>
 
-        <div>
+        <div className="w-full md:w-max">
           <form action="">
             <InputComponent placeholder="Buscar" name="search" type="search" />
           </form>
+        </div>
+
+        <div className="flex cursor-pointer items-center gap-8 px-1 md:hidden">
+          <AiOutlineMenu className="text-2xl" />
         </div>
       </div>
     </header>
