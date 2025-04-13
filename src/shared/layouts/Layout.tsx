@@ -6,7 +6,13 @@ const Layout = () => {
     <>
       <Header />
 
-      <Outlet />
+      <main className="w-full">
+        <section className="mx-auto w-full max-w-[90rem]">
+          <Outlet />
+        </section>
+      </main>
+
+      <footer>Footer</footer>
     </>
   )
 }

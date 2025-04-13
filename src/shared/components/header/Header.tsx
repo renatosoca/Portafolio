@@ -1,7 +1,8 @@
 import { MouseEvent, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { BiMailSend, BiDownload, BiTerminal } from 'react-icons/bi'
+import { BiTerminal } from 'react-icons/bi'
 import { NavItem } from './NavItem'
+import { InputComponent } from '@/shared/components'
 
 export const Header = () => {
   const menuBackDropRef = useRef<HTMLDivElement | null>(null)
@@ -42,8 +43,8 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="z-10 w-full bg-white">
-      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 py-2">
+    <header className="fixed z-10 w-full">
+      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 py-3">
         <div className="flex items-center gap-8">
           <Link to={'/'} className="flex items-center justify-center gap-2 py-0 text-2xl font-bold text-black">
             <BiTerminal className="text-4xl" />
@@ -79,21 +80,10 @@ export const Header = () => {
           </nav>
         </div>
 
-        <div className="flex gap-3 font-medium text-white">
-          <Link
-            to="/contacto"
-            className="flex items-center gap-2 rounded border border-transparent bg-black px-4 py-2 text-white transition-colors duration-[400ms] hover:border-black hover:bg-transparent hover:text-black">
-            <span>Contácteme</span>
-            <BiMailSend className="text-2xl" />
-          </Link>
-
-          <a
-            href={''}
-            download
-            className="flex items-center gap-2 rounded border border-blue-500 px-4 py-2 text-blue-500 transition-colors duration-[400ms] hover:bg-blue-500 hover:text-white">
-            Descargar CV
-            <BiDownload className="text-2xl" />
-          </a>
+        <div>
+          <form action="">
+            <InputComponent placeholder="Buscar" name="search" type="search" />
+          </form>
         </div>
       </div>
     </header>

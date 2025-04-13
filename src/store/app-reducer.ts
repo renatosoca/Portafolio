@@ -1,16 +1,17 @@
 import { Dispatch } from 'react'
 import { produce, Draft } from 'immer'
-import { IAppState } from '@/domain'
+import { IAppState, TTheme } from '@/domain'
 
 export type TDispatchApp = Dispatch<AppActionType>
 
-type AppActionType = { type: 'IsFetching' }
+type AppActionType = { type: 'Change Theme'; payload: TTheme }
 
 export const appReducer = produce((draft: Draft<IAppState>, action: AppActionType): IAppState => {
   switch (action.type) {
-    case 'IsFetching':
+    case 'Change Theme':
       return {
-        ...draft
+        ...draft,
+        theme: action.payload
       }
 
     default:

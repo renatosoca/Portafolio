@@ -1,7 +1,9 @@
 export interface IAppState {
-  isFetching: boolean
+  theme: TTheme
 }
 
+export type TTheme = 'dark' | 'light' | 'system'
+
 export const INITIAL_STATE_APP: IAppState = {
-  isFetching: false
+  theme: 'system'
 }
