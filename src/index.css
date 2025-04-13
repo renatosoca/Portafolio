@@ -115,8 +115,9 @@
 @theme {
   --font-sans: 'Public Sans Variable', 'Nunito', 'Arial', sans-serif;
   --font-public-sans: 'Public Sans Variable';
+  --font-satoshi: 'Satoshi', 'Arial', sans-serif;
 
-  --color-primary: #009688;
+  --color-primary: #694aef;
   --color-secondary: #1888ee;
   --color-hover-primary: #00897b;
   --color-hover-secondary: #0f77d4;
@@ -168,6 +169,37 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./shared/assets/fonts/Satoshi-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./shared/assets/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./shared/assets/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./shared/assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./shared/assets/fonts/Satoshi-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
 }
 
 ::-webkit-scrollbar {

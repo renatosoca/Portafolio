@@ -1,48 +1,66 @@
+import { Button } from '@/shared/components'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import FondoSVG from '@/shared/assets/svgs/bg-fondo.svg'
+
 const HomePage = () => {
   return (
     <>
-      <section className="grid min-h-screen grid-cols-1 md:grid-cols-2">
-        <div className="relative h-full bg-gradient-to-br from-primary to-secondary p-4">
-          <div className="h-[66px]" />
-          <picture className="absolute top-0 right-0 bottom-0 left-0">
-            <source srcSet="./public/bg-profile.webp" type="image/webp" />
-            <img className="h-full w-full object-cover" src="./public/bg-profile.webp" alt="" />
-          </picture>
-          <picture className="absolute top-0 right-0 bottom-0 left-0 z-10">
-            <source srcSet="./public/ellipse.webp" type="image/webp" />
-            <img className="h-full w-full object-cover" src="./public/ellipse.webp" alt="" />
-          </picture>
+      <section className="-z-10 grid min-h-screen grid-cols-1 md:grid-cols-2">
+        <div className="flex h-full flex-col items-start justify-center px-4 pr-8">
+          <div className="flex flex-col gap-4 font-satoshi">
+            <h1 className="font-francois text-4xl font-bold">Soy Renato Soca.</h1>
+            <h2 className="font-francois text-6xl font-bold">FullStack develop.</h2>
+            <p className="pr-10 text-base text-gray-500">
+              Soy un apasionado de la programación y desarrollo web, mis frameworks/librerías son React js y .Net. Me
+              encanta aprender y mejorar mis habilidades a diario. Siempre estoy dispuesto a explorar nuevos lenguajes,
+              librerías y frameworks.
+            </p>
+          </div>
 
-          <h1>Renato</h1>
+          <div className="pt-8">
+            <Button className="px-12 font-semibold">Ver proyectos</Button>
+          </div>
         </div>
 
-        <div className="p-4">
-          <div className="h-[66px]" />
-
-          <div>
-            <h2>Renato Soca Ramirez</h2>
-            <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet necessitatibus animi inventore cumque,
-              veniam laboriosam facere ab consectetur nisi eius dolore temporibus ea cupiditate illum dolorem molestias
-              fugit quae harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, expedita delectus.
-              Minima repudiandae quasi adipisci voluptas eos repellendus. Labore veritatis nesciunt ipsam architecto
-              optio aliquam voluptatem corporis dolores similique. Quis? Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Doloribus qui sapiente, exercitationem ad nam reprehenderit. Molestias amet sit natus
-              error reprehenderit? Suscipit sapiente molestias atque tempore officiis similique vero voluptates?
-            </span>
+        <div className="relative">
+          <div className="absolute top-0 right-0 flex gap-8">
+            <div className="relative overflow-hidden rounded-b-primary bg-primary px-56 py-72">
+              <img
+                className="absolute -bottom-30 left-1/2 -translate-x-1/2 object-cover text-9xl"
+                src={FondoSVG}
+                alt=""
+              />
+            </div>
+            <div>
+              <div className="flex flex-col items-center gap-4 rounded-b-primary bg-primary px-4 pb-8">
+                <div className="h-[10rem] w-[.2rem] rounded-b-primary bg-white" />
+                <BsGithub className="text-2xl text-white hover:cursor-pointer" />
+                <BsLinkedin className="text-2xl text-white" />
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="flex items-center justify-center rounded-lg bg-[#141821] px-10 py-8 transition-[scale] hover:scale-105">
-              YouTube
+
+          <div className="absolute bottom-0 flex w-full flex-col items-center gap-3 p-6">
+            <div className="mr-auto ml-20 flex gap-2 rounded bg-white px-4 py-3 outline outline-primary">
+              <div>Logo</div>
+              <div>
+                <h3>Desarrollador React js</h3>
+                <p>2 años de exp.</p>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded-lg bg-amber-200 px-10 py-8 transition-[scale] hover:scale-110">
-              YouTube
+            <div className="ml-auto flex gap-2 rounded bg-white px-4 py-3 outline outline-primary">
+              <div>Logo</div>
+              <div>
+                <h3>Desarrollador React js</h3>
+                <p>2 años de exp.</p>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded-lg bg-amber-200 px-10 py-8 transition-[scale] hover:scale-110">
-              YouTube
-            </div>
-            <div className="flex items-center justify-center rounded-lg bg-amber-200 px-10 py-8 transition-[scale] hover:scale-110">
-              YouTube
+            <div className="mr-auto ml-auto flex gap-2 rounded bg-white px-4 py-3 outline outline-primary">
+              <div>Logo</div>
+              <div>
+                <h3>Desarrollador React js</h3>
+                <p>2 años de exp.</p>
+              </div>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ const groupVariants = cva('relative', {
   variants: {
     variant: {
       outline:
-        'w-full rounded border border-gray-300 bg-white transition-[color,outline] focus-within:outline-blue-400 hover:outline-blue-600 hover:outline focus-within:outline'
+        'w-full rounded border border-gray-300 bg-white transition-[color,outline] focus-within:outline-black/90 hover:outline-black hover:outline focus-within:outline'
     },
     size: {
       default: ''
@@ -38,7 +38,7 @@ const labelVariants = cva(
   {
     variants: {
       variant: {
-        outline: 'peer-focus-within:top-0 peer-focus-within:text-blue-400 peer-not-placeholder-shown:top-0'
+        outline: 'peer-focus-within:top-0 peer-focus-within:text-black peer-not-placeholder-shown:top-0'
       },
       size: {
         default: 'px-2 peer-focus-within:text-xs peer-not-placeholder-shown:text-xs'

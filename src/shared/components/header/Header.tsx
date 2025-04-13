@@ -43,14 +43,14 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="fixed z-10 w-full">
-      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 py-3">
+    <header className="fixed z-100 w-full">
+      <div className="mx-auto flex w-full max-w-[80rem] items-center justify-between px-4 py-3">
         <div className="flex items-center gap-8">
           <Link to={'/'} className="flex items-center justify-center gap-2 py-0 text-2xl font-bold text-black">
             <BiTerminal className="text-4xl" />
           </Link>
 
-          <nav className="block font-medium text-gray-500">
+          <nav className="block font-medium text-black">
             <ul className="flex h-full gap-4">
               <NavItem
                 pathname="/project"
