@@ -44,14 +44,14 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="fixed z-100 w-full">
+    <header className="fixed z-100 w-full bg-[var(--background)]/80">
       <div className="mx-auto flex w-full max-w-[80rem] items-center justify-between gap-3 px-4 py-3">
         <div className="flex items-center gap-8 ">
-          <Link to={'/'} className=" font-bold text-black">
+          <Link to={'/'} className="font-bold text-black dark:text-white">
             <BiTerminal className="text-4xl" />
           </Link>
 
-          <nav className="hidden font-medium text-black md:block">
+          <nav className="hidden font-medium text-black md:block dark:text-white">
             <ul className="flex h-full gap-4">
               <NavItem
                 pathname="/project"
@@ -71,7 +71,7 @@ export const Header = () => {
 
             <div
               ref={menuBackDropRef}
-              className="invisible absolute top-0 left-0 z-[-1] rounded bg-black/10 p-4 py-2 opacity-0 backdrop-blur-2xl transition-[transform,width,height,opacity,visibility] duration-[300ms,400ms,300ms,400ms,400ms] ease-initial"
+              className="invisible absolute top-0 left-0 z-[-1] rounded bg-black/10 p-4 py-2 opacity-0 backdrop-blur-2xl transition-[transform,width,height,opacity,visibility] duration-[300ms,400ms,300ms,400ms,400ms] ease-initial dark:bg-white/10"
               style={{
                 transform: 'translate(var(--left), var(--top))',
                 width: 'var(--width)',

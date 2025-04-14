@@ -5,11 +5,11 @@ import FondoSVG from '@/shared/assets/svgs/bg-fondo.svg'
 const HomePage = () => {
   return (
     <>
-      <section className="-z-10 grid min-h-screen grid-cols-1 md:grid-cols-2">
+      <section className="-z-10 grid min-h-[46rem] grid-cols-1 md:grid-cols-2">
         {/* BACKGROUND */}
         <div className="relative md:order-2">
           <div className="absolute top-0 right-0 flex gap-8">
-            <div className="relative overflow-hidden rounded-b-primary bg-primary  ">
+            <div className="relative overflow-hidden rounded-b-primary bg-primary px-4 ">
               <img
                 className="absolute -bottom-30 left-1/2 -translate-x-1/2 object-cover text-9xl"
                 src={FondoSVG}
@@ -53,7 +53,7 @@ const HomePage = () => {
 
         <div className="flex h-full flex-col items-start justify-center px-4 pr-8">
           <div className="flex flex-col gap-4 font-satoshi">
-            <h1 className="font-francois text-2xl font-bold text-primary md:text-4xl">Soy Renato Soca.</h1>
+            <h1 className="font-francois text-2xl font-bold md:text-4xl">Soy Renato Soca.</h1>
             <h2 className="font-francois text-3xl/5 font-bold md:text-6xl">FullStack develop.</h2>
             <p className="text-sm/5 text-gray-500 md:text-base">
               Soy un apasionado de la programación y desarrollo web, mis frameworks/librerías son React js y .Net. Me
@@ -63,7 +63,9 @@ const HomePage = () => {
           </div>
 
           <div className="pt-8">
-            <Button className="px-12 font-semibold">Ver proyectos</Button>
+            <Button className="px-12 font-semibold">
+              <p>Ver proyectos</p>
+            </Button>
           </div>
         </div>
       </section>
