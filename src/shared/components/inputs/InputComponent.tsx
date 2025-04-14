@@ -6,10 +6,10 @@ const groupVariants = cva('relative', {
   variants: {
     variant: {
       outline:
-        'w-full rounded border border-gray-300 bg-white transition-[color,outline] focus-within:outline-black/90 hover:outline-black hover:outline focus-within:outline'
+        'w-full border border-gray-300 bg-inherit transition-[color,outline] duration-200 dark:focus-within:border-white dark:focus-within:outline-white/90 focus-within:outline-black/90 dark:hover:border-white dark:hover:outline-white hover:outline-black hover:outline focus-within:outline'
     },
     size: {
-      default: ''
+      default: 'rounded-primary'
     }
   },
   defaultVariants: {
@@ -21,10 +21,11 @@ const groupVariants = cva('relative', {
 const inputVariants = cva('w-full peer', {
   variants: {
     variant: {
-      outline: 'bg-inherit rounded outline-none placeholder:opacity-0 focus-within:placeholder:opacity-100'
+      outline:
+        'bg-inherit outline-none placeholder:opacity-0 focus-within:placeholder:opacity-100 overflow-hidden -z-10'
     },
     size: {
-      default: 'px-3 py-2 text-base'
+      default: 'px-3 py-2 text-base rounded-primary'
     }
   },
   defaultVariants: {

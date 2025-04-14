@@ -14,7 +14,7 @@ createRoot(container).render(
   <StrictMode>
     <BrowserRouter basename={meta.env.VITE_APP_BASENAME}>
       <Suspense fallback={<LoadingBar />}>
-        <AppProvider defaultTheme="light">
+        <AppProvider>
           <App />
         </AppProvider>
       </Suspense>
